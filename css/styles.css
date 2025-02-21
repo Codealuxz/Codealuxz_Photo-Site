@@ -72,7 +72,7 @@ h2 {
 }
 
 h3 {
-    font-size: 2.369rem;
+    font-size: 2.0rem;
     /* 37.92px */
 }
 
@@ -150,7 +150,7 @@ main {
     width: calc(100% - 40px);
     height: 2000px;
     position: absolute;
-    top: 110px;
+    top: 120px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -167,4 +167,15 @@ main {
     overflow: hidden;
     word-wrap: break-word;
     position: relative;
+}
+
+.filters {
+    width: 60%;
+    height: 50px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--main-text-color);
+    border-radius: 10000px;
+    color: var(--main-bg-color);
 }
