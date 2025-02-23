@@ -520,11 +520,33 @@ main {
     header {
         width: 90% !important;
     }
+
     .filters {
         padding-top: 10px;
         width: 90% !important;
         display: grid;
         height: auto !important;
         border-radius: var(--main-border-radius-tags-menu);
+    }
+
+    .modal-content {
+        width: 90% !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .tags-menu {
+        display: none;
+        position: absolute;
+        transform: translateX(45%);
+        background: var(--main-bg-color);
+        border: 1px solid var(--main-border-color);
+        border-radius: var(--main-border-radius-tags-menu) 0 0 var(--main-border-radius-tags-menu);
+        padding: 15px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        max-height: 400px;
+        width: 70% !important;
+        overflow-y: auto;
     }
 }
