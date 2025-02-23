@@ -1,0 +1,6 @@
+# Ignore the photo directory
+photo/
+
+#ignore python files
+*.py
+
