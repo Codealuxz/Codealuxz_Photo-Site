@@ -126,7 +126,7 @@ header {
     position: absolute;
     bottom: 5px;
     left: 90px;
-    content: "by Codealuxz";
+    content: "Photograpy site";
     font-size: 10px;
     color: var(--main-text-color-secondary);
 }
@@ -511,4 +511,20 @@ main {
     color: var(--main-text-color-secondary);
     font-size: 0.8rem;
     margin-left: 5px;
+}
+
+
+/* responsive */
+
+@media (max-width: 1240px) {
+    header {
+        width: 90% !important;
+    }
+    .filters {
+        padding-top: 10px;
+        width: 90% !important;
+        display: grid;
+        height: auto !important;
+        border-radius: var(--main-border-radius-tags-menu);
+    }
 }
