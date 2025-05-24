@@ -92,25 +92,9 @@ class Gallery {
 
             img.onload = () => {
                 try {
-                    // Créer un canvas pour redimensionner l'image
-                    const canvas = document.createElement('canvas');
-                    const ctx = canvas.getContext('2d');
-
-                    // Calculer les dimensions pour un carré
-                    const size = Math.min(img.width, img.height);
-                    const sourceX = (img.width - size) / 2;
-                    const sourceY = (img.height - size) / 2;
-
-                    // Définir la taille du canvas
-                    canvas.width = 300;
-                    canvas.height = 300;
-
-                    // Dessiner l'image redimensionnée
-                    ctx.drawImage(img, sourceX, sourceY, size, size, 0, 0, 300, 300);
-
-                    // Créer la miniature finale
+                    // Utiliser directement la miniature
                     const thumbnail = document.createElement('img');
-                    thumbnail.src = canvas.toDataURL('image/jpeg', 0.8);
+                    thumbnail.src = img.src;
                     thumbnail.alt = filename;
 
                     // Ajouter l'événement de clic sur le conteneur
@@ -138,7 +122,8 @@ class Gallery {
                 resolve();
             };
 
-            img.src = `photos/${filename}`;
+            // Charger la miniature au lieu de l'image originale
+            img.src = `photos/thumbnails/thumb_${filename}`;
         });
     }
 
