@@ -18,7 +18,7 @@ def create_thumbnail(image_path):
             thumbnail_path = os.path.join(THUMBNAIL_DIR, f"thumb_{filename}")
             
             # Sauvegarder la miniature
-            img.save(thumbnail_path, quality=85, optimize=True)
+            img.save(thumbnail_path, quality=80, optimize=True)
             print(f"✓ Miniature créée : {thumbnail_path}")
     except Exception as e:
         print(f"❌ Erreur avec {image_path}: {str(e)}")
